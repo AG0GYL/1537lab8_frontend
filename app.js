@@ -4,7 +4,7 @@ const weatherDiv = document.getElementById("weatherDiv");
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const city = form.elements.city.value;
-    const response = await fetch(`http://localhost:3000/weather?city=${city}`);
+    const response = await fetch(`https://one537lab8-backend.onrender.com/weather?city=${city}`);
     const data = await response.json();
     weatherDiv.innerHTML = `
     <p>Temperature: ${data.temperature}</p>
